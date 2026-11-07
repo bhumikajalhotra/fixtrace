@@ -1,0 +1,411 @@
+[
+  {
+    "incident_id": "2c09991f",
+    "title": "Redis OOM Crash",
+    "description": "Redis node crashed due to out-of-memory, evicting keys",
+    "logs": "OOM command not allowed when used memory > 'maxmemory'",
+    "severity": "high",
+    "category": "database",
+    "service": "redis-cache",
+    "status": "resolved",
+    "root_cause": "Resource exhaustion",
+    "fix_applied": "Scaled resources and restarted",
+    "outcome": "resolved",
+    "source": "verified",
+    "created_at": "2026-11-06T09:10:01.758467",
+    "resolved_at": "2026-11-07T09:10:01.758676",
+    "similar": []
+  },
+  {
+    "incident_id": "21d7574a",
+    "title": "Payment Gateway API Timeout",
+    "description": "Payment API returning 504 after deployment",
+    "logs": "FATAL: sorry, too many clients already",
+    "severity": "high",
+    "category": "database",
+    "service": "payment-api",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": "open",
+    "source": "verified",
+    "created_at": "2026-11-05T09:10:01.758702",
+    "resolved_at": null,
+    "similar": []
+  },
+  {
+    "incident_id": "5e35eeb1",
+    "title": "API Gateway 502 Bad Gateway",
+    "description": "Upstream connection refused during peak traffic",
+    "logs": "connect() failed (111: Connection refused)",
+    "severity": "high",
+    "category": "networking",
+    "service": "api-gateway",
+    "status": "resolved",
+    "root_cause": "Resource exhaustion",
+    "fix_applied": "Scaled resources and restarted",
+    "outcome": "resolved",
+    "source": "verified",
+    "created_at": "2026-11-04T09:10:01.758718",
+    "resolved_at": "2026-11-05T09:10:01.758722",
+    "similar": []
+  },
+  {
+    "incident_id": "c68441e7",
+    "title": "Auth Service JWT Validation Failure",
+    "description": "Users unable to login, token validation errors",
+    "logs": "jwt: invalid signature",
+    "severity": "medium",
+    "category": "auth",
+    "service": "auth-service",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": "open",
+    "source": "verified",
+    "created_at": "2026-11-03T09:10:01.758732",
+    "resolved_at": null,
+    "similar": []
+  },
+  {
+    "incident_id": "a82d7689",
+    "title": "Kubernetes Pod CrashLoopBackOff",
+    "description": "Worker pods restarting repeatedly",
+    "logs": "CrashLoopBackOff",
+    "severity": "medium",
+    "category": "orchestration",
+    "service": "worker",
+    "status": "resolved",
+    "root_cause": "Resource exhaustion",
+    "fix_applied": "Scaled resources and restarted",
+    "outcome": "resolved",
+    "source": "verified",
+    "created_at": "2026-11-02T09:10:01.758740",
+    "resolved_at": "2026-11-03T09:10:01.758744",
+    "similar": []
+  },
+  {
+    "incident_id": "5d9f5723",
+    "title": "Postgres Connection Pool Exhaustion",
+    "description": "DB connections maxed out",
+    "logs": "FATAL: sorry, too many clients already",
+    "severity": "high",
+    "category": "database",
+    "service": "postgres",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": "open",
+    "source": "verified",
+    "created_at": "2026-11-01T09:10:01.758751",
+    "resolved_at": null,
+    "similar": []
+  },
+  {
+    "incident_id": "8416898b",
+    "title": "CDN Cache Invalidation Failure",
+    "description": "Stale assets served after deploy",
+    "logs": "cache miss ratio 98%",
+    "severity": "low",
+    "category": "cdn",
+    "service": "cdn",
+    "status": "resolved",
+    "root_cause": "Resource exhaustion",
+    "fix_applied": "Scaled resources and restarted",
+    "outcome": "resolved",
+    "source": "verified",
+    "created_at": "2026-10-31T09:10:01.758758",
+    "resolved_at": "2026-11-01T09:10:01.758761",
+    "similar": []
+  },
+  {
+    "incident_id": "213b042e",
+    "title": "Message Queue Backlog",
+    "description": "RabbitMQ queue depth growing",
+    "logs": "queue depth 50000",
+    "severity": "medium",
+    "category": "messaging",
+    "service": "rabbitmq",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": "open",
+    "source": "verified",
+    "created_at": "2026-10-30T09:10:01.758768",
+    "resolved_at": null,
+    "similar": []
+  },
+  {
+    "incident_id": "690df8f4",
+    "title": "Test",
+    "description": "db timeout",
+    "logs": "too many clients",
+    "severity": "high",
+    "category": "database",
+    "service": "payment-api",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": null,
+    "source": "ai_hypothesis",
+    "created_at": "2026-11-07T10:08:51.813538",
+    "resolved_at": null,
+    "similar": [
+      {
+        "text": "DB connection pool exhaustion occurred on 2026-11-07.",
+        "score": null
+      },
+      {
+        "text": "DB connection pool is exhausted.",
+        "score": null
+      },
+      {
+        "text": "Payment API returning 503 errors | When: 2026-11-07 | DB connection pool exhaustion",
+        "score": null
+      },
+      {
+        "text": "Redis node crashed due to out-of-memory, evicting keys",
+        "score": null
+      },
+      {
+        "text": "Resource exhaustion (mentioned_at=2026-11-07T09:10Z)",
+        "score": null
+      }
+    ],
+    "analysis": "## Incident Triage Runbook \u2013 \u201cTest\u201d (db timeout / \u201ctoo many clients\u201d)\n\n| Component | Immediate Action | Owner |\n|-----------|------------------|-------|\n| **DB / Connection Pool** | \u2705 |\u202fOps / DB\u2011admin |\n| **Application** | \u2705 |\u202fApp\u2011team |\n| **Monitoring / Alerts** | \u2705 |\u202fSRE |\n\n---\n\n### 1\ufe0f\u20e3 Likely Root\u2011Causes  *(AI hypothesis)*\n| # | Hypothesis (AI) | Why it fits the evidence |\n|---|------------------|--------------------------|\n| **H1** | **Connection\u2011pool exhaustion** \u2013 the pool size is smaller than the burst of incoming requests. | Same symptom as the 2026\u201111\u201107 incident (DB pool exhausted \u2192 503). |\n| **H2** | **Connection leak** \u2013 some code path fails to `close()`/`release()` connections, causing a gradual build\u2011up. | \u201cToo many clients\u201d appears even when traffic is stable; leaks accumulate over time. |\n| **H3** | **Long\u2011running queries or lock contention** \u2013 queries hold connections for seconds\u2011minutes, starving the pool. | Timeout reported; DB logs often show \u201cwaiting for connection\u201d when a few queries block the pool. |\n| **H4** | **Sudden traffic spike / bot flood** \u2013 external load surge pushes the pool beyond its limit. | \u201cToo many clients\u201d can be triggered by a short\u2011lived traffic burst. |\n| **H5** | **DB resource exhaustion (CPU/IO, OOM)** \u2013 the DB server cannot accept new connections. | Historical note: \u201cResource exhaustion\u201d logged at 09:10\u202fZ on 2026\u201111\u201107. |\n\n> **Next step:** Validate each hypothesis in order of likelihood (H1 \u2192 H2 \u2192 H3 \u2192 H4 \u2192 H5).\n\n---\n\n### 2\ufe0f\u20e3 Immediate Mitigation Steps\n1. **Confirm the symptom**\n   - `psql -U <user> -c \"SELECT count(*) FROM pg_stat_activity;\"` (or equivalent for your DB) \u2192 should show > pool limit.\n   - Check app logs for \u201cpool exhausted\u201d / \u201cfailed to acquire connection\u201d.\n\n2. **Temporarily increase pool size**\n   - Edit the application config (e.g., `maxPoolSize`, `HikariCP.maximumPoolSize`) to **+50\u202f%** of current value.\n   - Restart the affected service(s) (or reload config if hot\u2011reload supported).\n\n3. **Kill idle/abandoned connections (if safe)**\n   - `SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE state = 'idle' AND query_start < now() - interval '5 minutes';`\n   - Or use the pool\u2019s \u201ceviction\u201d feature (`HikariCP.maxLifetime`, `idleTimeout`) to drop stale connections.\n\n4. **Enable circuit\u2011breaker / throttling**\n   - If the platform supports it (e.g., Istio, Envoy), set a **503** response for the payment API to protect the DB while you investigate.\n\n5. **Scale the DB (quick\u2011scale)**\n   - If you\u2019re on a cloud\u2011managed DB, spin up a read replica or increase instance size for a few minutes to relieve pressure.\n\n6. **Notify stakeholders**\n   - Slack/Email: \u201cDB connection pool exhausted \u2013 temporary pool\u2011size bump applied; investigation ongoing.\u201d\n\n---\n\n### 3\ufe0f\u20e3 Permanent Fix\n| Area | Action | Owner | Target |\n|------|--------|-------|--------|\n| **Connection\u2011Pool Configuration** | Right\u2011size `maxPoolSize` based on observed peak concurrent DB sessions + safety margin (e.g., 20\u202f%). Enable `leakDetectionThreshold` (HikariCP) to log leaked connections. | App team | Within 24\u202fh |\n| **Code Review** | Audit all DB access paths for missing `close()`/`release()` (especially in error branches, async callbacks). Add `try\u2011with\u2011resources` or `using` patterns. | Dev leads | 48\u202fh |\n| **Query Optimization** | Identify top\u2011N longest\u2011running queries (`pg_stat_statements`). Add indexes or rewrite queries to reduce execution time <\u202f500\u202fms. | DB\u2011admin / DB\u2011engineer | 72\u202fh |\n| **Back\u2011pressure & Rate\u2011limiting** | Implement request throttling (e.g., token bucket) on the Payment API. Ensure overload \u2192 429 rather than DB saturation. | API team | 48\u202fh |\n| **Capacity Planning** | Set alerts on `pg_stat_activity` >\u202f80\u202f% of `max_connections`. Add auto\u2011scale policy for DB tier if cloud\u2011based. | SRE | Ongoing |\n| **Monitoring Enhancements** | Export pool metrics (active, idle, pending) to Prometheus/Datadog. Create dashboards and alert on \u201cpool usage > 85\u202f% for > 2\u202fmin\u201d. | Observability team | 24\u202fh |\n| **Failover / Redundancy** | Deploy a hot\u2011standby replica; configure read\u2011only traffic to use it. Ensure the primary can shed load gracefully. | DB\u2011admin | 1\u202fweek |\n\n---\n\n### 4\ufe0f\u20e3 What to Verify (Post\u2011Mitigation & Post\u2011Fix)\n\n| Check | Expected Result | Tool / Command |\n|-------|----------------|----------------|\n| **Pool usage** | `< 70\u202f%` of configured max after traffic normalizes | Metrics dashboard (Prometheus `hikari_pool_active_connections`) |\n| **No connection leaks** | No \u201cConnection leak detection\u201d warnings for \u2265\u202f5\u202fmin | Application logs (`leakDetectionThreshold`) |\n| **Query latency** | 95th\u2011percentile <\u202f500\u202fms | `pg_stat_statements`, APM |\n| **DB connection count** | `SELECT count(*) FROM pg_stat_activity;` matches expected concurrency | psql/psqladmin |\n| **Error rate** | Payment API 2xx >\u202f98\u202f% (503/429 down to baseline) | API gateway logs, SLO monitor |\n| **Alerting** | New alerts fire on simulated load (e.g., load\u2011test to 90\u202f% pool) | Alertmanager test |\n| **Rollback safety** | Rolling back the pool\u2011size bump does not re\u2011trigger exhaustion | Repeat step 2 with original config after fix deployed |\n\nIf any verification fails, re\u2011enter the triage loop: re\u2011examine hypotheses, adjust mitigation, and iterate.\n\n--- \n\n**TL;DR**: The \u201ctoo many clients\u201d log strongly points to a **connection\u2011pool exhaustion** (historically seen on 2026\u201111\u201107). Bump the pool size now, kill idle connections, and enable leak detection. Then fix the root cause by right\u2011sizing the pool, sealing code leaks, optimizing long queries, and adding throttling & alerts. Verify pool health, query latency, and error rates before closing the incident."
+  },
+  {
+    "incident_id": "20581a05",
+    "title": "Payment Gateway API Timeout",
+    "description": "",
+    "logs": "ERROR: Connection pool exhausted for service: payment-api",
+    "severity": "high",
+    "category": "database",
+    "service": "payment-api",
+    "status": "resolved",
+    "root_cause": "",
+    "fix_applied": "",
+    "outcome": "resolved",
+    "source": "verified",
+    "created_at": "2026-11-07T10:27:58.090405",
+    "resolved_at": "2026-11-07T10:28:36.321936",
+    "similar": [
+      {
+        "text": "Payment API returning 503 errors | When: 2026-11-07 | DB connection pool exhaustion",
+        "score": null
+      },
+      {
+        "text": "Payment API is returning 503 errors.",
+        "score": null
+      },
+      {
+        "text": "DB connection pool is exhausted.",
+        "score": null
+      },
+      {
+        "text": "DB connection pool exhaustion occurred on 2026-11-07.",
+        "score": null
+      },
+      {
+        "text": "2026-11-07 is a day when the Payment API returned 503 errors.",
+        "score": null
+      }
+    ],
+    "analysis": "**FixTrace \u2013 Payment Gateway API Timeout Triage Runbook**  \n*(All times are UTC unless noted)*  \n\n---\n\n## 1. Likely Root\u2011Cause(s) \u2013 **AI Hypotheses**\n\n| # | Hypothesis | Why it fits the current signal |\n|---|------------|--------------------------------|\n| **AI\u2011H1** | **Database connection\u2011pool exhaustion** (same pattern as 2026\u201111\u201107) | Log line *\u201cERROR: Connection pool exhausted for service: payment\u2011api\u201d* matches the exact symptom that caused 503s on 2026\u201111\u201107. |\n| **AI\u2011H2** | **Sudden traffic spike / burst** overwhelming the pool | A rapid increase in request rate (e.g., flash sale, new partner integration) can consume all pooled connections faster than they are released. |\n| **AI\u2011H3** | **Leaked DB connections in the payment\u2011api code** (e.g., missing `finally`/`close`) | Even without a traffic surge, a recent code change that introduced a query path without proper cleanup can gradually starve the pool. |\n| **AI\u2011H4** | **External DB service degradation** (slow queries, lock contention) causing connections to stay open longer | If the DB server is slow, each connection lives longer, reducing the pool\u2019s effective size. |\n| **AI\u2011H5** | **Mis\u2011configured pool size** (e.g., after a recent config change or deployment) | A lower max\u2011pool setting than the baseline can trigger exhaustion under normal load. |\n\n> **Next step:** Validate which hypothesis(es) are true by checking metrics, recent deployments, and DB health.\n\n---\n\n## 2. Immediate Mitigation (\u2264\u202f15\u202fmin)\n\n1. **Throttle inbound traffic**  \n   * If you have an API gateway or load balancer, enable a temporary rate\u2011limit or circuit\u2011breaker for `/payment/*` endpoints (e.g., 50\u202freq/s).  \n   * If possible, route non\u2011critical payment calls to a *fallback* \u201caccept\u2011and\u2011queue\u201d service that writes requests to a durable queue (Kafka/SQS) for later processing.\n\n2. **Increase DB connection pool size (hot\u2011swap)**  \n   * Edit the payment\u2011api runtime config (env var or config file) to raise `DB_POOL_MAX` by 2\u20113\u00d7 (e.g., from 20 \u2192 60).  \n   * Restart **only** the payment\u2011api pods/instances (rolling restart) \u2013 no DB restart required.  \n\n3. **Force\u2011close idle connections** (if supported)  \n   * Run the DB driver\u2019s \u201cpurge idle connections\u201d command or issue `SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE state = 'idle' AND backend_type='client backend'` for PostgreSQL (adjust for your DB).  \n\n4. **Quick health\u2011check the DB**  \n   * Run `SELECT count(*) FROM pg_stat_activity;` (or equivalent) to verify total connections vs. max.  \n   * Verify latency of a simple query (`SELECT 1;`) \u2013 if >\u202f200\u202fms, the DB itself may be under stress.\n\n5. **Notify stakeholders**  \n   * Send an incident alert (Slack/Teams) with the mitigation actions you just took. Include ETA for next update (15\u202fmin).\n\n---\n\n## 3. Permanent Fix (\u2264\u202f4\u202fh \u2013 1\u202fday)\n\n| Phase | Action | Owner | Success Criteria |\n|-------|--------|-------|-------------------|\n| **P\u20111** | **Root\u2011cause confirmation** \u2013 Pull metrics from monitoring (DB pool usage, request rate, query latency) and review recent commits. | SRE / DB Admin | One hypothesis fully validated. |\n| **P\u20112** | **Code audit** \u2013 Search for missing `close()` / `finally` blocks in any recent PRs to payment\u2011api. Add try\u2011with\u2011resources or connection\u2011pool wrappers where needed. | Backend Engineer | 0 leaked connections in automated test suite. |\n| **P\u20113** | **Pool sizing review** \u2013 Set `DB_POOL_MAX` to a value that covers peak traffic + safety margin (e.g., 2\u00d7 peak concurrent DB sessions). Document sizing rationale. | SRE | Pool never exceeds 80\u202f% of max in 30\u2011day window. |\n| **P\u20114** | **Circuit\u2011breaker / bulkhead** \u2013 Implement client\u2011side circuit breaker (e.g., Resilience4j) around DB calls to fail fast and avoid exhausting the pool. | Backend Engineer | API returns graceful 429/503 with clear message instead of pool starvation. |\n| **P\u20115** | **Autoscaling & alerting** \u2013 Add alerts for `db_pool_used_percent > 75%` lasting >\u202f2\u202fmin; enable horizontal pod autoscaler for payment\u2011api based on request latency. | SRE | Alerts fire before pool hits 100\u202f%; pods scale out automatically. |\n| **P\u20116** | **Post\u2011mortem & runbook update** \u2013 Capture timeline, root cause, and the fixes; embed new thresholds into the runbook. | Incident Lead | Document reviewed and stored in the knowledge base. |\n\n---\n\n## 4. What to Verify (Post\u2011Mitigation & Post\u2011Fix)\n\n| Check | How | Expected Result |\n|-------|-----|-----------------|\n| **Pool health** | `SELECT now(), max_conn, used FROM pg_pool_status;` (or driver metric) | `used / max_conn` <\u202f60\u202f% after traffic stabilizes. |\n| **API latency** | Query Prometheus/Datadog: `http_request_duration_seconds{service=\"payment-api\"}` | 95th\u2011percentile \u2264\u202f300\u202fms (or SLA target). |\n| **Error rate** | `rate(http_requests_total{service=\"payment-api\",status=~\"5..\"}[1m])` | Near\u2011zero 5xx after mitigation. |\n| **DB query performance** | Run typical payment queries; verify avg exec time <\u202f100\u202fms. | No abnormal spikes. |\n| **Circuit\u2011breaker behavior** | Simulate DB slowdown (e.g., `tc` network delay) \u2192 ensure API returns fallback error, not pool exhaustion. | Fast failure, circuit opens after threshold. |\n| **Autoscaling** | Spike load with a load\u2011test tool (e.g., locust) \u2192 watch HPA metrics. | New pods spin up within 30\u202fs; pool usage stays stable. |\n| **Log cleanliness** | Search logs for \u201cConnection pool exhausted\u201d after fix. | No occurrences for >\u202f30\u202fmin. |\n\n---\n\n### Quick \u201cRun\u2011Now\u201d Checklist\n\n1. \u2610 Rate\u2011limit inbound payment traffic.  \n2. \u2610 Raise DB pool max (rolling restart).  \n3. \u2610 Verify pool usage <\u202f80\u202f% and DB latency normal.  \n4. \u2610 Notify stakeholders of mitigation status.  \n\nOnce the system is stable, move into the permanent\u2011fix phases above.  \n\n**Stay on call \u2013 next update in 15\u202fminutes.**  "
+  },
+  {
+    "incident_id": "4ddb291c",
+    "title": "Payment Gateway API Timeout 2",
+    "description": "",
+    "logs": "ERROR: Connection pool exhausted for service: payment-api",
+    "severity": "high",
+    "category": "database",
+    "service": "payment-api",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": null,
+    "source": "ai_hypothesis",
+    "created_at": "2026-11-07T10:29:20.397823",
+    "resolved_at": null,
+    "similar": [
+      {
+        "text": "Payment API returning 503 errors | When: 2026-11-07 | DB connection pool exhaustion",
+        "score": null
+      },
+      {
+        "text": "Payment Gateway API Timeout | When: 2026-11-07 | Where: database",
+        "score": null
+      },
+      {
+        "text": "DB connection pool is exhausted.",
+        "score": null
+      },
+      {
+        "text": "Payment API is returning 503 errors.",
+        "score": null
+      },
+      {
+        "text": "DB connection pool exhaustion occurred on 2026-11-07.",
+        "score": null
+      }
+    ],
+    "analysis": "**Incident:** *Payment Gateway API Timeout 2*  \n**Symptom:** `ERROR: Connection pool exhausted for service: payment-api` \u2192 downstream API calls time\u2011out / return 503.\n\n---  \n\n## 1. Likely Root\u2011Cause (AI\u2011hypotheses)\n\n| # | Hypothesis | Why it fits the evidence |\n|---|------------|--------------------------|\n| 1\ufe0f\u20e3 | **DB connection\u2011pool exhaustion** \u2013 the pool reached its max size and new requests cannot acquire a connection. | Exact log message; identical to the 2026\u201111\u201107 incident that produced 503s. |\n| 2\ufe0f\u20e3 | **Connection leak in the payment\u2011api code** (e.g., forgotten `close()`/`release()` after queries). | Leaks cause gradual pool depletion even under normal traffic. |\n| 3\ufe0f\u20e3 | **Sudden traffic spike or batch job** that exceeds the pool\u2019s capacity. | A burst can exhaust a correctly sized pool instantly. |\n| 4\ufe0f\u20e3 | **Long\u2011running/blocked queries** (locking, deadlocks, missing indexes) that hold connections for too long. | Connections stay occupied, reducing available slots. |\n| 5\ufe0f\u20e3 | **Mis\u2011configured pool size** after a recent deployment or config change. | A reduced `maxPoolSize` will surface immediately. |\n| 6\ufe0f\u20e3 | **Database health issue** (slow I/O, high latency) causing queries to take longer, thus hogging connections. | Slower DB response = connections held longer \u2192 exhaustion. |\n\n---\n\n## 2. Immediate Mitigation (30\u2011min window)\n\n| Action | Owner | Command / Detail |\n|--------|-------|------------------|\n| **A. Stop new traffic to payment\u2011api** (if possible) | Load\u2011balancer / API\u2011gateway team | Enable a temporary \u201cmaintenance\u201d rule or rate\u2011limit to reduce incoming requests. |\n| **B. Verify pool metrics** | DB\u2011Ops | `SELECT * FROM pg_stat_activity;` (Postgres) or pool\u2011specific metric endpoint (e.g., `curl http://payment-api/metrics | grep pool`). |\n| **C. Restart the payment\u2011api service** | Service Ops | `systemctl restart payment-api` (or Kubernetes pod rollout). This clears leaked connections and restores pool capacity. |\n| **D. Increase pool size temporarily** | Service Ops | Edit env var `DB_POOL_MAX=200` (or appropriate) and redeploy/reload. |\n| **E. Identify and kill long\u2011running DB sessions** (if DB health is critical) | DB\u2011Ops | `SELECT pid, age(clock_timestamp(), query_start), query FROM pg_stat_activity WHERE state='active' ORDER BY age DESC LIMIT 10;` \u2192 `SELECT pg_terminate_backend(pid);` (use with caution). |\n| **F. Notify downstream consumers** | Incident Lead | Send a brief status update (expected ETA ~15\u202fmin). |\n| **G. Enable circuit\u2011breaker fallback** (if already built) | Application team | Flip feature flag to return a cached response or a friendly \u201cservice busy\u201d message. |\n\n*Goal:* Free up connections, stop further pool drain, and restore API responsiveness within the next 15\u201130\u202fminutes.\n\n---\n\n## 3. Permanent Fix (1\u20113\u202fdays)\n\n| # | Fix | Steps |\n|---|-----|-------|\n| 1\ufe0f\u20e3 | **Fix any connection leaks** | Review recent code changes; ensure every DB client/connection is closed in `finally`/`defer` blocks or using language\u2011native pool helpers. Add static analysis rule to catch missing `close()`. |\n| 2\ufe0f\u20e3 | **Resize the connection pool** | Set `maxPoolSize` based on DB capacity and expected concurrency (e.g., 1/2 of DB max connections). Document sizing formula in runbooks. |\n| 3\ufe0f\u20e3 | **Add pool\u2011exhaustion alerts** | Create a monitoring rule: `pool_available < 20% for > 1m \u2192 PagerDuty`. Include latency spikes. |\n| 4\ufe0f\u20e3 | **Implement query timeout & cancellation** | Configure driver/ORM to abort queries >\u202fX\u202fseconds, returning the connection to the pool. |\n| 5\ufe0f\u20e3 | **Optimize slow queries / add indexes** | Run `EXPLAIN ANALYZE` on the top\u20115 longest queries (identified from `pg_stat_statements`). Apply missing indexes or rewrite queries. |\n| 6\ufe0f\u20e3 | **Introduce back\u2011pressure / rate\u2011limiting** | At the API gateway, reject or queue requests when pool usage >\u202f80\u202f%. |\n| 7\ufe0f\u20e3 | **Add health\u2011check endpoint exposing pool state** | `/health` should return `UP` only if `availableConnections > 10%`. Integration with orchestration (K8s liveness). |\n| 8\ufe0f\u20e3 | **Run load\u2011test after changes** | Simulate peak traffic (e.g., using k6 or JMeter) to verify pool never saturates. |\n| 9\ufe0f\u20e3 | **Document the incident** | Add a post\u2011mortem entry linking to this runbook and the root\u2011cause analysis. |\n\n---\n\n## 4. Verification Checklist (After Mitigation & After Permanent Fix)\n\n| \u2705 | What to verify | How |\n|---|----------------|-----|\n| 1 | **Connection pool health** \u2013 `available >= 80%` under normal load. | Query pool metrics endpoint or Grafana dashboard. |\n| 2 | **API latency** \u2013 95th\u2011pct latency <\u202f200\u202fms (or your SLA). | Run a quick curl loop or synthetic monitor. |\n| 3 | **Error rate** \u2013 HTTP 5xx <\u202f0.1\u202f% over the last 5\u202fmin. | Check API gateway logs / Prometheus `http_requests_total{status=~\"5..\"}`. |\n| 4 | **Database CPU / I/O** \u2013 No sustained spikes >\u202f70\u202f% after traffic normalizes. | Look at DB CloudWatch/Prometheus metrics. |\n| 5 | **No orphaned sessions** \u2013 `pg_stat_activity` shows only expected idle connections. | Run `SELECT count(*) FROM pg_stat_activity WHERE state='idle in transaction';` |\n| 6 | **Alerting** \u2013 Test that a simulated pool\u2011exhaustion (e.g., `maxPoolSize-1` connections) fires the alert. | Temporarily lower threshold and verify PagerDuty notification. |\n| 7 | **Rollback safety** \u2013 Deploy the fix in a canary; ensure no regressions before full rollout. | Observe same metrics on canary pods. |\n| 8 | **Documentation** \u2013 Runbook updated with new pool size and alert thresholds. | Verify entry in Confluence/Runbook repo. |\n\n**If any verification point fails \u2192 reopen the incident, prioritize the failing component, and iterate on the permanent fix.**"
+  },
+  {
+    "incident_id": "88c8a93d",
+    "title": "PAYMENT GATEWAY ",
+    "description": "",
+    "logs": "ERROR: Connection pool exhausted for service: payment-api",
+    "severity": "high",
+    "category": "database",
+    "service": "payment-api",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": null,
+    "source": "ai_hypothesis",
+    "created_at": "2026-11-07T10:29:51.870906",
+    "resolved_at": null,
+    "similar": [
+      {
+        "text": "Payment API returning 503 errors | When: 2026-11-07 | DB connection pool exhaustion",
+        "score": null
+      },
+      {
+        "text": "Payment API is returning 503 errors.",
+        "score": null
+      },
+      {
+        "text": "Payment Gateway API has a timeout of 2026-11-07.",
+        "score": null
+      },
+      {
+        "text": "The Payment Gateway API has a timeout of 2026-11-07.",
+        "score": null
+      },
+      {
+        "text": "DB connection pool is exhausted.",
+        "score": null
+      }
+    ],
+    "analysis": "## PAYMENT GATEWAY \u2013 503 / \u201cConnection pool exhausted for service: payment\u2011api\u201d\n\n### 1\ufe0f\u20e3 Likely Root\u2011Cause **(AI\u2011Hypothesis)**\n| # | Hypothesis | Why it fits the symptom |\n|---|------------|------------------------|\n| A | **DB connection pool exhaustion** (leaked or long\u2011running DB calls) | Exact log message, matches the 2026\u201111\u201107 incident that produced 503s. |\n| B | **External Payment\u2011Gateway timeout** causing request threads to hang while waiting for a response, eventually filling the pool | Same day a gateway timeout was reported; blocked threads can hold DB connections. |\n| C | **Sudden traffic spike / burst** that exceeds the pool size | 503 appears only when load exceeds capacity; could be a flash\u2011sale or bot traffic. |\n| D | **Mis\u2011configured connection\u2011pool size** after a recent deployment or config change | New config may have lowered `maxPoolSize` inadvertently. |\n| E | **Database slowness / lock contention** (slow queries, deadlocks) that keep connections checked out too long | Even with normal traffic, slow DB makes the pool appear exhausted. |\n\n> **AI\u2011hypothesis**: Treat each line as a plausible cause; validate in order of least disruptive to most.\n\n---\n\n### 2\ufe0f\u20e3 Immediate Mitigation (15\u201130\u202fmin)\n\n| Step | Action | Command / UI | Owner |\n|------|--------|--------------|-------|\n| 1 | **Check health endpoints** \u2013 confirm API is still responding on `/health` (should return 200/OK). | `curl -s http://payment-api.internal/health` | SRE |\n| 2 | **Inspect DB connection pool metrics** \u2013 current usage, max, wait\u2011time. | `curl http://payment-api.internal/metrics | grep db_pool` | SRE |\n| 3 | **If pool >\u202f90\u202f% used**, **restart the payment\u2011api pods/instances** to clear leaked connections. | `kubectl rollout restart deployment/payment-api` | SRE |\n| 4 | **Temporarily increase pool size** (if config is live\u2011editable) to give breathing room while you investigate. | Edit ConfigMap / Helm values: `maxPoolSize: 200` \u2192 apply | SRE |\n| 5 | **Enable circuit\u2011breaker** on outbound calls to the external payment gateway to avoid threads hanging. | Add/adjust `fallback` rule in API gateway or service mesh (e.g., Istio `DestinationRule`). | Platform |\n| 6 | **Throttle inbound traffic** (rate\u2011limit) if a spike is obvious. | Apply a temporary rate\u2011limit rule on the ingress (`nginx`/`istio`). | Platform |\n| 7 | **Notify stakeholders** (product, support) that the service is degraded and that a mitigation is in progress. | Slack/PagerDuty update. | Incident Lead |\n\n*Goal:* Get the connection pool back under threshold and restore 2xx responses within the next 15\u201130\u202fmin.\n\n---\n\n### 3\ufe0f\u20e3 Permanent Fix (Hours \u2192 Days)\n\n| Area | Action | Details |\n|------|--------|---------|\n| **DB Connection Management** | **Audit and fix connection leaks** | Review code paths that acquire a DB connection \u2013 ensure every `try/finally` or `using` block releases it. Add unit\u2011tests that simulate high concurrency. |\n| | **Tune pool configuration** | Set `maxPoolSize` based on observed peak concurrency + safety margin (e.g., 1.5\u00d7 peak). Adjust `connectionTimeout`, `idleTimeout`, and `maxLifetime` to avoid stale connections. |\n| **External Gateway** | **Add timeout & retry policy** | Ensure outbound HTTP calls have a hard timeout (\u2264\u202f5\u202fs) and bounded retries (max 2). |\n| | **Circuit\u2011breaker** | Implement a circuit\u2011breaker (Hystrix, Resilience4j, Envoy) that opens after N consecutive timeouts, returning a fast\u2011fail to callers. |\n| **Observability** | **Dashboard for pool health** | Grafana panel: `db_pool_used / db_pool_max`. Alert when >\u202f80\u202f% for >\u202f2\u202fmin. |\n| | **Latency alerts** | Alert on DB query latency >\u202f500\u202fms and on external gateway latency >\u202f2\u202fs. |\n| **Capacity Planning** | **Load\u2011testing** | Simulate peak traffic (including gateway latency) to validate pool sizing and circuit\u2011breaker thresholds. |\n| **Configuration Management** | **Guardrail CI checks** | Lint ConfigMaps/Helm charts to prevent accidental lowering of pool size. |\n| **Documentation** | **Runbook update** | Add this incident\u2019s findings, metrics, and mitigation steps to the official \u201cPayment API 503 \u2013 Connection Pool Exhaustion\u201d runbook. |\n\n---\n\n### 4\ufe0f\u20e3 What to Verify (Post\u2011Mitigation)\n\n| Verify | How | Expected Result |\n|--------|-----|-----------------|\n| **API health** | `curl -s http://payment-api/internal/health` | 200 OK |\n| **Connection pool usage** | `curl http://payment-api/internal/metrics | grep db_pool` (or Prometheus query `db_pool_used`) | Usage <\u202f70\u202f% of `maxPoolSize` under normal load |\n| **Response latency** | Run a few real\u2011world checkout requests (or use `hey`/`wrk`) | 2xx responses within SLA (\u2264\u202f200\u202fms) |\n| **External gateway latency** | Check outbound call latency metric (`gateway_latency_seconds`) | \u2264\u202f2\u202fs, no spikes |\n| **Error rate** | Monitor `http_requests_total{code=~\"5..\"}` in Grafana | <\u202f0.1\u202f% over last 5\u202fmin |\n| **Circuit\u2011breaker status** | Query circuit\u2011breaker metric (`cb_state`) | CLOSED (or OPEN only during intentional testing) |\n| **Logs** | Search for \u201cConnection pool exhausted\u201d after mitigation | No new occurrences for at least 30\u202fmin |\n| **Stakeholder confirmation** | Ask product/support that checkout flow works end\u2011to\u2011end | Confirmed success |\n\nIf **all** verification items pass, close the incident and schedule the permanent\u2011fix tasks (code audit, config tuning, alerts). If any check fails, iterate on the mitigation steps or reopen the investigation.\n\n---\n\n**TL;DR** \u2013 The symptom points to a saturated DB connection pool, likely aggravated by slow external gateway calls or a traffic spike. Restart the service, temporarily boost the pool, and add timeouts/circuit\u2011breakers now; then fix connection\u2011leak bugs, tune the pool, and harden observability for the long term."
+  },
+  {
+    "incident_id": "06ca62cb",
+    "title": "Payment Gateway API Timeout",
+    "description": "",
+    "logs": "ERROR: Connection pool exhausted for service: payment-api",
+    "severity": "high",
+    "category": "database",
+    "service": "payment-api",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": null,
+    "source": "ai_hypothesis",
+    "created_at": "2026-11-07T10:35:27.936061",
+    "resolved_at": null,
+    "similar": [
+      {
+        "text": "Payment Gateway API has a timeout of 2026-11-07.",
+        "score": null
+      },
+      {
+        "text": "The Payment Gateway API has a timeout of 2026-11-07.",
+        "score": null
+      },
+      {
+        "text": "Payment API returning 503 errors | When: 2026-11-07 | DB connection pool exhaustion",
+        "score": null
+      },
+      {
+        "text": "Payment Gateway API Timeout | When: 2026-11-07 | Where: database",
+        "score": null
+      },
+      {
+        "text": "Payment API is returning 503 errors.",
+        "score": null
+      }
+    ],
+    "analysis": "**Incident Triage Runbook \u2013 \u201cPayment Gateway API Timeout\u201d**  \n*Date: 2026\u201111\u201107*  \n\n---\n\n## 1. Likely Root\u2011Cause(s)  *(AI\u2011hypothesis \u2013 needs validation)*  \n\n| # | Hypothesis | Reasoning / Evidence |\n|---|------------|----------------------|\n| 1\ufe0f\u20e3 | **Database connection\u2011pool exhaustion** \u2013 the pool size is too small for current request volume or connections are being leaked. | Direct log entry: *\u201cERROR: Connection pool exhausted for service: payment-api\u201d*. Same pattern seen in historic incidents that produced 503s. |\n| 2\ufe0f\u20e3 | **Slow/blocked DB queries** causing connections to stay open longer than expected. | A saturated pool often follows long\u2011running queries (missing indexes, lock contention, deadlocks). |\n| 3\ufe0f\u20e3 | **External dependency latency** (e.g., downstream payment processor) causing request threads to wait and hold DB connections. | Timeout symptom in the API layer; if downstream calls block, DB connections are held. |\n| 4\ufe0f\u20e3 | **Improper connection\u2011pool configuration after recent deploy** (e.g., reduced max pool size, missing `maxIdleTime`). | Check recent changes in CI/CD; similar mis\u2011configurations caused prior timeouts. |\n| 5\ufe0f\u20e3 | **Resource starvation on the DB host** (CPU, memory, I/O) leading to slow responses. | DB\u2011side metrics often dip before pool exhaustion. |\n\n> **Action:** Validate each hypothesis in order of likelihood (1\u202f\u2192\u202f5).\n\n---\n\n## 2. Immediate Mitigation Steps (\u2264\u202f15\u202fmin)\n\n| Step | Command / Action | Owner | Success Indicator |\n|------|-------------------|-------|--------------------|\n| 2.1 | **Alert on\u2011call DB/Infra** \u2013 page primary DB admin and API on\u2011call. | Incident Commander | Acknowledgement in pager. |\n| 2.2 | **Check connection\u2011pool metrics** (`SELECT * FROM pg_stat_activity;` or pool\u2011monitor endpoint). | DB Ops | Pool usage >\u202f90\u202f% for >\u202f5\u202fmin. |\n| 2.3 | **Temporarily increase pool size** (e.g., `MAX_POOL_SIZE=200` via env var or config reload). | API Ops | New config applied; `curl /health` returns OK. |\n| 2.4 | **Restart the payment\u2011api service** (graceful restart to release leaked connections). | API Ops | Service pods/instances report \u201cRunning\u201d and health checks pass. |\n| 2.5 | **Enable circuit\u2011breaker / rate\u2011limit** on the payment\u2011api (if supported) to stop new traffic from overwhelming DB. | API Ops | Rate\u2011limit active, traffic throttled. |\n| 2.6 | **If pool increase isn\u2019t possible**, **scale the DB read replica** or **add a replica** to off\u2011load connections. | DB Ops | New replica appears in `pg_replication_status`. |\n| 2.7 | **Notify stakeholders** (support, finance, customers) that the issue is being mitigated and expected recovery window. | Incident Commander | Email/Slack broadcast sent. |\n\n*If after steps 2.3\u20112.4 the error rate drops below 5\u202f% for 5\u202fmin, move to verification.*\n\n---\n\n## 3. Permanent Fix (Post\u2011mortem Action Items)\n\n| # | Fix | Owner | Target Completion |\n|---|-----|-------|--------------------|\n| 3.1 | **Right\u2011size the DB connection pool** \u2013 set `MAX_POOL_SIZE` based on peak RPS, DB capacity, and average query time. Document in runbook. | Backend Team | +1\u202fweek |\n| 3.2 | **Add connection\u2011leak detection** (e.g., log warnings when a connection lives >\u202fX\u202fseconds). Deploy monitoring alerts. | Backend Team | +2\u202fweeks |\n| 3.3 | **Profile and optimise slow queries** (add missing indexes, rewrite joins). Capture top 5 longest\u2011running queries from `pg_stat_statements`. | DB Team | +2\u202fweeks |\n| 3.4 | **Implement DB health\u2011check & auto\u2011scale** \u2013 Cloud\u2011watch alarms on CPU, I/O, and pool usage; trigger replica scaling. | Infra Team | +3\u202fweeks |\n| 3.5 | **Review recent config/deploy changes** that altered pool size or timeout values; add a gate in CI to validate pool config against a baseline. | Release Engineering | +1\u202fweek |\n| 3.6 | **Add circuit\u2011breaker & retry policy** for downstream payment processor calls to prevent them from holding DB connections. | API Team | +2\u202fweeks |\n| 3.7 | **Update runbooks** to include \u201cConnection\u2011Pool Exhaustion\u201d scenario, with the steps above. | Documentation Owner | +1\u202fweek |\n\n---\n\n## 4. What to Verify (Post\u2011Mitigation)\n\n1. **Error Rate** \u2013 `payment-api` 503/timeout metric <\u202f1\u202f% over the last 5\u202fmin.  \n2. **Pool Utilisation** \u2013 steady state <\u202f70\u202f% for at least 15\u202fmin.  \n3. **DB Latency** \u2013 average query response <\u202f200\u202fms; 95th percentile <\u202f500\u202fms.  \n4. **CPU/Memory/I/O** on DB host \u2013 <\u202f70\u202f% utilization.  \n5. **Health Checks** \u2013 `/health` endpoint returns `OK`; load\u2011balancer marks all instances healthy.  \n6. **Alerting** \u2013 confirm that alert thresholds (pool % >\u202f80\u202f%, DB latency >\u202f500\u202fms) fire correctly in a test.  \n7. **Customer Impact** \u2013 verify that end\u2011to\u2011end payment flow succeeds in staging/production (e.g., a test transaction).  \n\nOnce all verification points pass, **declare the incident resolved**, update the incident timeline, and schedule the permanent fix tasks.  \n\n---  \n\n*Prepared by **FixTrace** \u2013 DevOps Incident Response Agent.*"
+  },
+  {
+    "incident_id": "2e13443d",
+    "title": "Payment Gateway 502 Bad Gateway",
+    "description": "",
+    "logs": "[ERROR] upstream prematurely closed connection while reading response header from upstream, client: 10.0.1.4, server: payment-api",
+    "severity": "high",
+    "category": "database",
+    "service": "payment-api",
+    "status": "resolved",
+    "root_cause": "",
+    "fix_applied": "",
+    "outcome": "resolved",
+    "source": "verified",
+    "created_at": "2026-11-07T11:05:25.684430",
+    "resolved_at": "2026-11-07T11:05:45.688233",
+    "similar": [
+      {
+        "text": "Payment API is returning 503 errors.",
+        "score": null
+      },
+      {
+        "text": "Payment Gateway API has a timeout of 2026-11-07.",
+        "score": null
+      },
+      {
+        "text": "The Payment Gateway API has a timeout of 2026-11-07.",
+        "score": null
+      },
+      {
+        "text": "Payment API returning 503 errors | When: 2026-11-07 | DB connection pool exhaustion",
+        "score": null
+      },
+      {
+        "text": "Payment Gateway API Timeout | When: 2026-11-07 | Where: database",
+        "score": null
+      }
+    ],
+    "analysis": "### 1\ufe0f\u20e3 Likely Root\u2011Cause\u202f\u2013\u202fAI Hypotheses  \n| # | Hypothesis | Why it fits the symptom |\n|---|------------|--------------------------|\n| A | **Up\u2011stream service (Payment Gateway) is crashing or closing sockets early** \u2013 e.g., out\u2011of\u2011memory, fatal exception, thread\u2011pool exhaustion. | Nginx (or the API gateway) logs *\u201cupstream prematurely closed connection while reading response header\u201d* \u2013 classic when the upstream process dies or aborts the TCP connection before sending a full HTTP response. |\n| B | **Database\u2011related resource exhaustion** (connection\u2011pool saturation, long\u2011running queries) causing the gateway to hang and the TCP socket to be torn down. | Historical incident shows DB pool exhaustion \u2192 503. If the gateway now blocks on DB, the upstream may time\u2011out and close the socket, surfacing as 502. |\n| C | **Network\u2011level timeout / MTU/packet loss** between the gateway and the payment service (e.g., firewall idle\u2011timeout, load\u2011balancer health\u2011check mismatch). | Premature close can be triggered by a middlebox dropping idle connections. |\n| D **(Less likely)** | **Mismatched TLS/SSL handshake or protocol version** \u2013 gateway aborts the connection after handshake failure. | Would appear as \u201cupstream prematurely closed connection\u201d but usually accompanied by TLS errors in the logs. |\n| E | **Configuration change** (e.g., reduced `proxy_read_timeout`, `proxy_connect_timeout`, or `keepalive` limits) introduced recently. | A too\u2011short timeout will cause Nginx to kill the upstream before the response is ready. |\n\n---\n\n### 2\ufe0f\u20e3 Immediate Mitigation (30\u202fmin\u202fwindow)\n\n| Step | Action | Owner | Command / Quick\u2011Check |\n|------|--------|-------|------------------------|\n| 2.1 | **Confirm the 502 is consistent** \u2013 repeat a few API calls (curl/Postman) from a different client. | SRE | `curl -v https://payment-api.internal/payments \u2026` |\n| 2.2 | **Check health\u2011check endpoint** of the payment gateway. If unhealthy, note the status. | SRE | `curl -s http://gateway-internal/health` |\n| 2.3 | **Restart the upstream payment\u2011gateway service** (or the pod/container) to clear any stuck state. | Ops | `kubectl rollout restart deployment/payment-gateway` or service\u2011specific command. |\n| 2.4 | **Temporarily increase Nginx (or API\u2011gateway) timeouts** to give the upstream more breathing room. | Ops | `proxy_connect_timeout 60s; proxy_read_timeout 120s;` \u2013 reload Nginx (`nginx -s reload`). |\n| 2.5 | **Scale the gateway horizontally** (add one replica) to reduce load pressure. | Ops | `kubectl scale deployment/payment-gateway --replicas=+1` |\n| 2.6 | **If DB pool is suspected, open a new DB connection pool** or temporarily raise pool size. | DB Admin | Adjust pool config (`max_connections`, `pool_size`) and reload. |\n| 2.7 | **Notify downstream services / customers** that the payment API is in a degraded state and that a short mitigation is in place. | Incident Lead | Use Slack/Statuspage. |\n| 2.8 | **Collect fresh logs** from both the gateway and the upstream service (error, access, and DB logs). | SRE | `kubectl logs -f deployment/payment-gateway` & `kubectl logs -f deployment/nginx-ingress` |\n\n*If after steps 2.3\u20112.5 the 502 disappears, keep the temporary timeout increase in place for the next 30\u202fmin while you investigate the underlying cause.*\n\n---\n\n### 3\ufe0f\u20e3 Permanent Fix (2\u20114\u202fh)\n\n| Area | Action | Reason | Owner |\n|------|--------|--------|-------|\n| **Upstream stability** | Fix the root crash:\u202freview recent code changes, memory leaks, unhandled exceptions, long\u2011running DB queries. Add proper error handling and graceful shutdown. | Prevents premature socket close. | Dev Team |\n| **Database connection pool** | Tune pool size, add connection\u2011pool monitoring, implement circuit\u2011breaker/back\u2011off for DB calls. Consider read\u2011replicas for heavy read traffic. | Avoids DB\u2011induced hangs that propagate up. | DB Admin |\n| **Gateway timeout configuration** | Set `proxy_connect_timeout`, `proxy_read_timeout`, `proxy_send_timeout` to values that exceed the longest expected backend response (e.g., 30\u201160\u202fs). Enable `proxy_buffering` if needed. | Guarantees the gateway won\u2019t kill a healthy upstream response. | Ops |\n| **Health\u2011check & auto\u2011recovery** | Deploy robust health\u2011check (HTTP 200 on `/ready`) and enable auto\u2011restart on failure (Kubernetes livenessProbe). | Detects and recovers from crashes quickly. | SRE |\n| **Observability** | Add metrics/alerts: <br>\u2022 `upstream_response_time` histogram <br>\u2022 `gateway_502_count` <br>\u2022 DB pool usage <br>\u2022 Process memory/CPU <br>Set thresholds to trigger paging before exhaustion. | Early detection of the same pattern. | SRE |\n| **Circuit\u2011breaker / Retry** | Implement client\u2011side retry with exponential back\u2011off for transient 502/504 errors; add a circuit\u2011breaker to stop hammering a failing upstream. | Reduces load on a struggling service. | Dev Team |\n| **Documentation** | Update runbook with exact log pattern, threshold values, and escalation path. | Future faster response. | Incident Lead |\n\n---\n\n### 4\ufe0f\u20e3 What to Verify (Post\u2011Fix)\n\n1. **HTTP status** \u2013 Re\u2011run a set of payment calls; expect `200` (or appropriate business\u2011level code) and **zero 502** responses.\n2. **Nginx / gateway logs** \u2013 No more *\u201cupstream prematurely closed connection\u201d* entries for the last 15\u202fmin.\n3. **Upstream health** \u2013 `/health` endpoint returns `200 OK` consistently.\n4. **DB pool metrics** \u2013 Utilisation stays below 70\u202f% under peak load.\n5. **Resource usage** \u2013 CPU/Memory of the payment\u2011gateway pods stay within defined limits (no OOM/KILL events).\n6. **Alerting** \u2013 Simulate a failure (e.g., stop the upstream) and confirm that alerts fire (502 count, health\u2011check failure) **and** that auto\u2011restart recovers the service.\n7. **Customer impact** \u2013 Verify order flow in a staging environment or via a synthetic transaction monitor; ensure end\u2011to\u2011end payment succeeds.\n\n---\n\n**TL;DR**  \n- **Most likely** the upstream payment\u2011gateway process is crashing or being throttled (DB pool, resource exhaustion).  \n- **Mitigate now**: restart the service, bump gateway timeouts, add a replica, and temporarily raise DB pool size.  \n- **Fix permanently**: resolve the upstream crash, tune DB pool, lock in safe gateway timeout values, add health\u2011checks, circuit\u2011breaker, and proper monitoring/alerts.  \n- **Validate** with zero 502s, healthy health\u2011checks, stable resource metrics, and successful end\u2011to\u2011end payment transactions.  "
+  },
+  {
+    "incident_id": "b26a08f3",
+    "title": "Checkout failing with 502",
+    "description": "",
+    "logs": "[ERROR] upstream prematurely closed connection while reading response header from upstream, client: 10.0.1.4, server: payment-api",
+    "severity": "high",
+    "category": "database",
+    "service": "payment-api",
+    "status": "open",
+    "root_cause": null,
+    "fix_applied": null,
+    "outcome": null,
+    "source": "ai_hypothesis",
+    "created_at": "2026-11-07T11:06:36.766305",
+    "resolved_at": null,
+    "similar": [
+      {
+        "text": "Payment Gateway 502 Bad Gateway | When: 2026-11-07 | Where: payment-api | Involving: client: 10.0.1.4, server: payment-api | incident resolution",
+        "score": null
+      },
+      {
+        "text": "Payment API is returning 503 errors.",
+        "score": null
+      },
+      {
+        "text": "Payment API returning 503 errors | When: 2026-11-07 | DB connection pool exhaustion",
+        "score": null
+      },
+      {
+        "text": "2026-11-07 is a day when the Payment API returned 503 errors.",
+        "score": null
+      },
+      {
+        "text": "The Payment Gateway API has a timeout of 2026-11-07.",
+        "score": null
+      }
+    ],
+    "analysis": "**FixTrace \u2013 Checkout\u202f502\u202fTriage Run\u2011book**  \n*Incident: \u201cCheckout failing with 502\u201d \u2013 10.0.1.4 \u2192 payment\u2011api*  \n\n---\n\n## 1\ufe0f\u20e3 Likely Root\u2011Cause(s) \u2013 **AI Hypotheses**\n\n| # | Hypothesis (AI\u2011generated) | Why it fits the symptom |\n|---|----------------------------|--------------------------|\n| 1 | **Up\u2011stream service (payment\u2011gateway) crashed or timed\u2011out** \u2013 the Nginx/Envoy front\u2011end reports *\u201cupstream prematurely closed connection while reading response header\u201d*. | Same error pattern seen on 2026\u201111\u201107 when the gateway returned **502**. |\n| 2 | **Database connection\u2011pool exhaustion** \u2192 the payment API cannot obtain a DB connection, aborts the request, and the proxy sees a closed socket. | Historical incident on 2026\u201111\u201107 showed **503** caused by pool exhaustion; a similar pool\u2011starvation can also surface as 502 when the API dies before sending headers. |\n| 3 | **Incorrect timeout settings** on the reverse\u2011proxy or upstream (e.g., proxy_read_timeout too low). | The \u201cPayment Gateway API has a timeout of 2026\u201111\u201107\u201d note suggests timeout mis\u2011configuration can surface as 502. |\n| 4 | **Network / firewall hiccup** between the proxy and the gateway (packet loss, MTU, SYN\u2011ACK drop). | Premature connection close can be triggered by abrupt network resets. |\n| 5 | **Resource saturation** (CPU / memory / file\u2011descriptors) on the upstream container/VM, causing it to kill the process mid\u2011handshake. | 502 errors often correlate with OOM / FD exhaustion. |\n| 6 | **Recent deployment bug** (e.g., malformed response, missing `Content\u2011Length` header) that makes the proxy think the upstream closed early. | New code roll\u2011outs are a common trigger for sudden 502 spikes. |\n\n---\n\n## 2\ufe0f\u20e3 Immediate Mitigation Steps (\u2264\u202f15\u202fmin)\n\n| Step | Action | Command / Tool | Owner |\n|------|--------|----------------|-------|\n| 1 | **Confirm scope** \u2013 check if only client\u202f10.0.1.4 is affected or all checkout traffic. | `curl -I https://checkout.myshop.com` from several bastion hosts. | On\u2011call |\n| 2 | **Inspect proxy health** \u2013 verify upstream pool status. | `nginx -T | grep upstream; curl http://<proxy>/nginx_status` or `kubectl exec <ingress-pod> -- curl localhost:10254/metrics`. | SRE |\n| 3 | **Restart the upstream pod/service** (payment\u2011gateway) to clear any hung state. | `kubectl rollout restart deployment/payment-gateway` or `systemctl restart payment-gateway`. | SRE |\n| 4 | **Temporarily increase proxy timeouts** to give the upstream extra breathing room. | `kubectl edit configmap nginx-conf` \u2192 `proxy_read_timeout 120s; proxy_connect_timeout 60s`. | SRE |\n| 5 | **Scale out** \u2013 add an extra replica of the payment\u2011gateway to relieve load. | `kubectl scale deployment payment-gateway --replicas=3`. | SRE |\n| 6 | **If DB pool is suspected, flush & reset the pool** (or temporarily increase `max_connections`). | `psql -c \"SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE state='idle in transaction';\"` then adjust `max_pool_size` in `application.yml`. | DB admin |\n| 7 | **Add a temporary fallback** \u2013 route checkout to a **stable staging endpoint** if one exists, to keep revenue flowing. | Update ingress rule to point to `payment-gateway-staging`. | Platform engineer |\n\n*If step\u202f3 resolves the 502 for all clients, move to verification (section\u202f4) before closing. If not, continue with deeper diagnostics (section\u202f5).*\n\n---\n\n## 3\ufe0f\u20e3 Permanent Fix (Post\u2011mortem Action Items)\n\n| Area | Fix | Owner | Target |\n|------|-----|-------|--------|\n| **Upstream stability** | Add health\u2011check endpoint (`/healthz`) and configure the ingress to **remove unhealthy pods** automatically. | SRE | +1\u202fday |\n| **DB connection pool** | Tune `max_pool_size` based on observed peak concurrency; implement **circuit\u2011breaker** to return 503 before the pool starves. | Backend team | +3\u202fdays |\n| **Timeout alignment** | Synchronize proxy timeouts, upstream read/write timeouts, and client\u2011side SDK timeouts (e.g., 30\u202fs). Document in runbook. | Platform | +2\u202fdays |\n| **Resource limits** | Set proper CPU/Memory limits and **request** values; enable autoscaling (HPA) based on request latency and error rate. | SRE | +2\u202fdays |\n| **Deployment safety** | Add a **canary** stage that validates response headers (`Content\u2011Length`, `Status`) before full rollout; add automated regression test for checkout flow. | DevOps | +5\u202fdays |\n| **Network reliability** | Enable **TCP keep\u2011alive** and verify MTU settings on the VPC; add monitoring for SYN\u2011ACK loss. | NetOps | +4\u202fdays |\n| **Observability** | Push upstream error metrics (`upstream_response_time`, `upstream_status`) to Grafana; set alerts for **>5\u202f% 502/503** over 2\u202fmin. | SRE | +1\u202fday |\n\n---\n\n## 4\ufe0f\u20e3 What to Verify (Post\u2011Mitigation)\n\n1. **HTTP status** \u2013 Re\u2011run checkout from multiple client IPs; expect `200 OK` (or proper business error codes, not 502).  \n2. **Proxy logs** \u2013 Ensure no new *\u201cupstream prematurely closed connection\u201d* entries for at least **10\u202fmin** after restart.  \n3. **Upstream health** \u2013 `curl http://payment-gateway/healthz` returns `200`; Kubernetes `READY` condition true.  \n4. **DB pool metrics** \u2013 `pg_stat_activity` shows <\u202f80\u202f% of `max_pool_size` utilization during peak load.  \n5. **Resource usage** \u2013 `top`/`kubectl top pod` shows CPU/Memory <\u202f70\u202f% of limits.  \n6. **Alert silence** \u2013 No 502/503 alerts fired in the monitoring dashboard for the next **30\u202fmin**.  \n7. **Business KPI** \u2013 Checkout conversion rate returns to baseline (within \u00b15\u202f% of historic average).  \n\nIf all verification points pass, **declare the incident resolved**, document the timeline, and close the ticket. If any step fails, roll back to the relevant immediate mitigation step and continue deeper investigation (e.g., packet capture with `tcpdump`, core dump analysis, or load\u2011test reproduction).\n\n--- \n\n**End of Run\u2011book**. Use this as a checklist; annotate any deviations directly in the incident ticket. Good luck!"
+  }
+]

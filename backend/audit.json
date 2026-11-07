@@ -1,0 +1,18 @@
+[
+  {
+    "incident_id": "20581a05",
+    "ai_hypothesis": "**FixTrace \u2013 Payment Gateway API Timeout Triage Runbook**  \n*(All times are UTC unless noted)*  \n\n---\n\n## 1. Likely Root\u2011Cause(s) \u2013 **AI Hypotheses**\n\n| # | Hypothesis | Why it fits the current signal",
+    "verified_root_cause": "",
+    "outcome": "resolved",
+    "matched": true,
+    "ts": "2026-11-07T10:28:36.322474"
+  },
+  {
+    "incident_id": "2e13443d",
+    "ai_hypothesis": "### 1\ufe0f\u20e3 Likely Root\u2011Cause\u202f\u2013\u202fAI Hypotheses  \n| # | Hypothesis | Why it fits the symptom |\n|---|------------|--------------------------|\n| A | **Up\u2011stream service (Payment Gateway) is crashing or closin",
+    "verified_root_cause": "",
+    "outcome": "resolved",
+    "matched": true,
+    "ts": "2026-11-07T11:05:45.689350"
+  }
+]
